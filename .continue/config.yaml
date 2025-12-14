@@ -1,0 +1,21 @@
+model:
+  provider: ollama
+  name: deepseek-coder:latest
+  temperature: 0.2
+  max_tokens: 2048
+
+workspace:
+  path: ./
+  include:
+    - "**/*.py"
+    - "**/*.js"
+    - "**/*.ts"
+  exclude:
+    - "node_modules/**"
+    - ".git/**"
+
+cli:
+  interactive: true
+  auto_accept: false
+  context_files: true
+
